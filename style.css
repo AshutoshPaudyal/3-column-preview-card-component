@@ -15,28 +15,27 @@ body {
 
 #container {
   background-color: hsla(0, 0%, 100%, 0.75);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #container-content {
-  max-height: 420px;
-  height: 90%;
   max-width: 850px;
   width: 90%;
   border-radius: 10px;
   display: flex;
-  flex: 1;
+  margin-block: 1rem;
 }
 
 .cars {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
 }
 
 .cars.sedans {
@@ -44,8 +43,10 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+
 .cars .car-icon {
   margin-bottom: 1.5rem;
+
 }
 .cars h1 {
   font-family: "Big Shoulders Display", sans-serif;
@@ -64,6 +65,7 @@ body {
   width: 85%;
   color: hsla(0, 0%, 100%, 0.75);
   line-height: 1.2rem;
+  flex-grow: 1;
 }
 
 .cars a {
@@ -128,47 +130,17 @@ body {
   background-color: hsl(179, 100%, 13%);
 }
 
-@media (max-width: 1003px) {
-  #container-content {
-    max-width: 90%;
-  }
-
-  .cars {
-    padding: 1.5rem;
-    width: 100%;
-  }
-
-  .cars h1 {
-    font-size: 1.5rem;
-  }
-
-  .cars p {
-    width: 100%;
-  }
-
-  .cars a {
-    width: 100%;
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 517px) {
+@media (max-width: 655px) {
   #container {
-    height: auto;
-    min-height: 100vh;
     padding: 2rem;
   }
   #container-content {
     max-width: 90%;
     flex-direction: column;
-    max-height: none;
-    height: auto;
   }
 
   .cars {
     padding: 1.5rem;
-    width: 100%; /* Make sure this is also 100% */
-    flex: 1;
     border-radius: 0;
   }
 
