@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", system-ui;
+  font-optical-sizing: auto;
+  font-size: 13px;
+}
+
+#container {
+  background-color: hsla(0, 0%, 100%, 0.75);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-content {
+  max-height: 420px;
+  height: 90%;
+  max-width: 850px;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
+}
+
+.cars {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.cars.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.cars .car-icon {
+  margin-bottom: 1.5rem;
+}
+.cars h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsla(0, 0%, 100%);
+  margin-top: 0;
+}
+
+.cars p {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: 155px;
+  height: 90%;
+  width: 85%;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.2rem;
+}
+
+.cars a {
+  margin-top: 3.5rem;
+  border-radius: 1.4rem;
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem;
+  text-decoration: none;
+  background-color: hsla(0, 0%, 100%);
+  max-width: 120px;
+  width: 90%;
+  border: 2px solid transparent;
+}
+
+.cars.sedans a {
+  color: hsl(31, 77%, 52%);
+}
+
+.cars.sedans a:hover,
+.cars.suvs a:hover,
+.cars.luxury a:hover {
+  border: 2px solid hsla(0, 0%, 100%);
+  color: hsla(0, 0%, 100%);
+}
+
+.cars.sedans a:hover {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.cars.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.cars.suvs p {
+  width: 90%;
+}
+
+.cars.suvs a {
+  color: hsl(184, 100%, 22%);
+}
+
+.cars.suvs a:hover {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.cars.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cars.luxury p {
+  width: 95%;
+}
+
+.cars.luxury a {
+  color: hsl(179, 100%, 13%);
+}
+
+.cars.luxury a:hover {
+  background-color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 1003px) {
+  #container-content {
+    max-width: 90%;
+  }
+
+  .cars {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .cars h1 {
+    font-size: 1.5rem;
+  }
+
+  .cars p {
+    width: 100%;
+  }
+
+  .cars a {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 517px) {
+  #container {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  #container-content {
+    max-width: 90%;
+    flex-direction: column;
+    max-height: none;
+    height: auto;
+  }
+
+  .cars {
+    padding: 1.5rem;
+    width: 100%; /* Make sure this is also 100% */
+    flex: 1;
+    border-radius: 0;
+  }
+
+  .cars.sedans {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .cars h1 {
+    font-size: 1.5rem;
+  }
+
+  .cars p {
+    width: 100%;
+  }
+
+  .cars a {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .cars.luxury {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
